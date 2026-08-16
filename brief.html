@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Бриф на проект — Николай Москалев</title>
+<meta name="description" content="Заполните бриф за 5 минут — получите готовое техзадание, которое можно отправить одним сообщением.">
+<meta name="color-scheme" content="dark light">
+<meta name="robots" content="noindex">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+
+<script>
+(function(){var r=document.documentElement;r.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){r.dataset.theme=t;}else if(window.matchMedia('(prefers-color-scheme: light)').matches){r.dataset.theme='light';}}catch(e){}})();
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#brief-form">Перейти к брифу</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">Николай Москалев<span class="logo-dot">.</span></a>
+
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="index.html#works">Работы</a>
+      <a href="index.html#services">Услуги</a>
+      <a href="index.html">На главную</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" aria-label="Переключить тему">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.2 5.2l1.9 1.9M16.9 16.9l1.9 1.9M18.8 5.2l-1.9 1.9M7.1 16.9l-1.9 1.9"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
+      </button>
+      <a class="btn btn-primary btn-sm" href="https://t.me/nmoskalev10" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="currentColor" stroke="none"><path d="M21.9 4.3 18.9 19c-.2 1-.8 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.3.3-.5.5-1 .5l.3-4.7 8.5-7.7c.4-.3-.1-.5-.6-.2L7.2 12.9l-4.5-1.4c-1-.3-1-1 .2-1.4l17.6-6.8c.8-.3 1.5.2 1.4 1z"/></svg>
+        <span class="btn-text">Написать</span>
+      </a>
+    </div>
+  </div>
+  <div class="progress-bar"><span id="progress-fill"></span></div>
+</header>
+
+<main class="brief-page">
+  <div class="container">
+
+    <div class="brief-hero">
+      <p class="eyebrow">5 минут · ничего не отправляется автоматически</p>
+      <h1>Бриф на проект</h1>
+      <p class="lead">Отметьте то, что вам подходит — необязательно всё. В конце страницы соберётся готовое техзадание, которое отправляется мне одной кнопкой. Ответы сохраняются в браузере, страницу можно закрыть и вернуться позже.</p>
+    </div>
+
+    <nav class="brief-nav" aria-label="Разделы брифа">
+      <a class="pill" href="#sec-about">О вас</a>
+      <a class="pill" href="#sec-project">Проект</a>
+      <a class="pill" href="#sec-goals">Цели</a>
+      <a class="pill" href="#sec-style">Стиль</a>
+      <a class="pill" href="#sec-colors">Цвета</a>
+      <a class="pill" href="#sec-structure">Структура</a>
+      <a class="pill" href="#sec-features">Функции</a>
+      <a class="pill" href="#sec-content">Контент</a>
+      <a class="pill" href="#sec-tech">Техника</a>
+      <a class="pill" href="#sec-budget">Бюджет</a>
+      <a class="pill" href="#sec-result">Итог</a>
+    </nav>
+
+    <form id="brief-form" autocomplete="off">
+
+      <section class="brief-section" id="sec-about">
+        <div class="brief-head"><span class="brief-num">01</span><h2>О вас</h2></div>
+
+        <div class="field" data-type="text" data-label="Имя / компания">
+          <label class="field-label" for="f-name">Как к вам обращаться</label>
+          <input class="input" type="text" id="f-name" placeholder="Имя или название компании">
+        </div>
+
+        <div class="field" data-type="text" data-label="Ниша">
+          <label class="field-label" for="f-niche">Чем занимаетесь</label>
+          <input class="input" type="text" id="f-niche" placeholder="Например: доставка цветов, автосервис, онлайн-курсы">
+        </div>
+
+        <div class="field" data-type="text" data-label="О бизнесе">
+          <label class="field-label" for="f-about">Коротко о деле и клиентах</label>
+          <textarea class="input" id="f-about" placeholder="Что продаёте, кто покупает, чем отличаетесь от конкурентов"></textarea>
+        </div>
+      </section>
+
+      <section class="brief-section" id="sec-project">
+        <div class="brief-head"><span class="brief-num">02</span><h2>Что нужно сделать</h2></div>
+
+        <div class="field" data-type="radio" data-label="Тип проекта">
+          <label class="field-label">Тип проекта</label>
+          <p class="field-hint">Один вариант</p>
+          <div class="opt-grid">
+            <label class="opt"><input type="radio" name="ptype" value="Лендинг (одностраничник под рекламу)"><span><b>Лендинг</b><i>Одна страница под рекламу</i></span></label>
+            <label class="opt"><input type="radio" name="ptype" value="Сайт-визитка"><span><b>Сайт-визитка</b><i>Несколько страниц о компании</i></span></label>
+            <label class="opt"><input type="radio" name="ptype" value="Интернет-магазин / каталог"><span><b>Магазин / каталог</b><i>Товары, корзина, заказы</i></span></label>
+            <label class="opt"><input type="radio" name="ptype" value="Telegram-бот"><span><b>Telegram-бот</b><i>Заявки, запись, рассылки</i></span></label>
+            <label class="opt"><input type="radio" name="ptype" value="Автоматизация рутины"><span><b>Автоматизация</b><i>Парсеры, отчёты, выгрузки</i></span></label>
+            <label class="opt"><input type="radio" name="ptype" value="AI-ассистент / интеграция нейросети"><span><b>AI-ассистент</b><i>Автоответы, разбор документов</i></span></label>
+            <label class="opt"><input type="radio" name="ptype" value="Пока не определился — нужен совет"><span><b>Пока не знаю</b><i>Нужен совет</i></span></label>
+          </div>
+        </div>
+
+        <div class="field" data-type="text" data-label="Задача своими словами">
+          <label class="field-label" for="f-task">Опишите задачу своими словами</label>
+          <textarea class="input" id="f-task" placeholder="Что должно происходить и что вас сейчас не устраивает"></textarea>
+        </div>
+      </section>
+
+      <section class="brief-section" id="sec-goals">
+        <div class="brief-head"><span class="brief-num">03</span><h2>Цели</h2></div>
+
+        <div class="field" data-type="checkbox" data-label="Цели проекта">
+          <label class="field-label">Что проект должен приносить</label>
+          <p class="field-hint">Можно отметить несколько</p>
+          <div class="chip-grid">
+            <label class="chip"><input type="checkbox" value="Заявки и продажи"><span>Заявки и продажи</span></label>
+            <label class="chip"><input type="checkbox" value="Рассказать о компании и услугах"><span>Рассказать о компании</span></label>
+            <label class="chip"><input type="checkbox" value="Узнаваемость бренда"><span>Узнаваемость бренда</span></label>
+            <label class="chip"><input type="checkbox" value="Разгрузить сотрудников от рутины"><span>Разгрузить сотрудников</span></label>
+            <label class="chip"><input type="checkbox" value="Поддержка текущих клиентов"><span>Поддержка клиентов</span></label>
+            <label class="chip"><input type="checkbox" value="Сбор базы подписчиков"><span>Сбор базы подписчиков</span></label>
+            <label class="chip"><input type="checkbox" value="Приём онлайн-оплат"><span>Приём оплат</span></label>
+          </div>
+        </div>
+
+        <div class="field" data-type="text" data-label="Как поймём что получилось">
+          <label class="field-label" for="f-success">По чему поймём, что проект удался</label>
+          <input class="input" type="text" id="f-success" placeholder="Например: 10 заявок в неделю, или админ перестал вручную вести записи">
+        </div>
+      </section>
+
+      <section class="brief-section" id="sec-style">
+        <div class="brief-head"><span class="brief-num">04</span><h2>Стиль</h2></div>
+
+        <div class="field" data-type="radio" data-label="Настроение">
+          <label class="field-label">Настроение и подача</label>
+          <div class="opt-grid">
+            <label class="opt"><input type="radio" name="mood" value="Минимализм — чисто, много воздуха"><span><b>Минимализм</b><i>Чисто, много воздуха</i></span></label>
+            <label class="opt"><input type="radio" name="mood" value="Деловой / корпоративный"><span><b>Деловой</b><i>Строго и солидно, для B2B</i></span></label>
+            <label class="opt"><input type="radio" name="mood" value="Премиум / люкс"><span><b>Премиум</b><i>Дорого и статусно</i></span></label>
+            <label class="opt"><input type="radio" name="mood" value="Дружелюбный — тепло и просто"><span><b>Дружелюбный</b><i>Тепло, просто, по-человечески</i></span></label>
+            <label class="opt"><input type="radio" name="mood" value="Яркий / креативный"><span><b>Яркий</b><i>Нестандартно, с характером</i></span></label>
+            <label class="opt"><input type="radio" name="mood" value="Технологичный / IT"><span><b>Технологичный</b><i>Сдержанно, по-инженерному</i></span></label>
+          </div>
+        </div>
+
+        <div class="field" data-type="text" data-label="Референсы">
+          <label class="field-label" for="f-refs">Сайты или боты, которые нравятся</label>
+          <input class="input" type="text" id="f-refs" placeholder="Ссылки или названия — можно просто «как у Тинькофф»">
+        </div>
+
+        <div class="field" data-type="text" data-label="Что не нравится">
+          <label class="field-label" for="f-dislikes">Чего точно не хотите</label>
+          <input class="input" type="text" id="f-dislikes" placeholder="Например: без анимаций, без стоковых улыбок, не кислотные цвета">
+        </div>
+
+        <div class="field" data-type="radio" data-label="Логотип и фирменный стиль">
+          <label class="field-label">Логотип и фирменный стиль</label>
+          <div class="opt-grid">
+            <label class="opt"><input type="radio" name="brand" value="Есть логотип и брендбук"><span><b>Всё есть</b><i>Логотип и брендбук</i></span></label>
+            <label class="opt"><input type="radio" name="brand" value="Есть только логотип"><span><b>Только логотип</b></span></label>
+            <label class="opt"><input type="radio" name="brand" value="Ничего нет"><span><b>Ничего нет</b></span></label>
+          </div>
+        </div>
+      </section>
+
+      <section class="brief-section" id="sec-colors">
+        <div class="brief-head"><span class="brief-num">05</span><h2>Цвета</h2></div>
+
+        <div class="field" data-type="radio" data-label="Палитра">
+          <p class="field-hint">Один вариант — или опишите свой в поле ниже</p>
+          <div class="palette-grid">
+            <label class="palette">
+              <input type="radio" name="palette" value="Монохром с одним акцентом (чёрный, белый, синий)">
+              <span class="swatches"><i style="background:#131313"></i><i style="background:#ffffff"></i><i style="background:#2a63e4"></i><i style="background:#e7e7e7"></i></span>
+              <b>Монохром + акцент</b>
+              <i>Чёрный, белый и один яркий цвет</i>
+            </label>
+            <label class="palette">
+              <input type="radio" name="palette" value="Тёплая земля (терракота, бежевый, коричневый)">
+              <span class="swatches"><i style="background:#7a4b2e"></i><i style="background:#c97b3d"></i><i style="background:#f1e2cf"></i><i style="background:#2e2620"></i></span>
+              <b>Тёплая земля</b>
+              <i>Терракота и бежевый</i>
+            </label>
+            <label class="palette">
+              <input type="radio" name="palette" value="Холодный деловой (тёмно-синий, серый)">
+              <span class="swatches"><i style="background:#10233d"></i><i style="background:#2e5c8a"></i><i style="background:#a9bccb"></i><i style="background:#f2f4f7"></i></span>
+              <b>Холодный деловой</b>
+              <i>Для B2B и финансов</i>
+            </label>
+            <label class="palette">
+              <input type="radio" name="palette" value="Мягкая пастель (розовый, мятный, кремовый)">
+              <span class="swatches"><i style="background:#f6a6c1"></i><i style="background:#a8e6cf"></i><i style="background:#fff3e0"></i><i style="background:#5b4b57"></i></span>
+              <b>Мягкая пастель</b>
+              <i>Нежные, «человечные» тона</i>
+            </label>
+            <label class="palette">
+              <input type="radio" name="palette" value="Энергичный контраст (оранжевый, жёлтый, бирюзовый)">
+              <span class="swatches"><i style="background:#17171a"></i><i style="background:#ff6b35"></i><i style="background:#ffc145"></i><i style="background:#06b6a0"></i></span>
+              <b>Энергичный контраст</b>
+              <i>Дерзко и заметно</i>
+            </label>
+            <label class="palette">
+              <input type="radio" name="palette" value="Люкс (чёрный, золото, тёмно-зелёный)">
+              <span class="swatches"><i style="background:#0b0b0c"></i><i style="background:#c6a15b"></i><i style="background:#f4efe6"></i><i style="background:#1e3327"></i></span>
+              <b>Люкс</b>
+              <i>Чёрный, золото, глубокий зелёный</i>
+            </label>
+            <label class="palette">
+              <input type="radio" name="palette" value="Природа / эко (зелёный, бежевый)">
+              <span class="swatches"><i style="background:#efebdd"></i><i style="background:#4f6f52"></i><i style="background:#93a87e"></i><i style="background:#2e2a22"></i></span>
+              <b>Природа / эко</b>
+              <i>Натуральные тона</i>
+            </label>
+            <label class="palette">
+              <input type="radio" name="palette" value="Тёмная тема (графит и приглушённый акцент)">
+              <span class="swatches"><i style="background:#14161a"></i><i style="background:#1c1f25"></i><i style="background:#6f9dd8"></i><i style="background:#e6e8ec"></i></span>
+              <b>Тёмная тема</b>
+              <i>Графит и мягкий акцент</i>
+            </label>
+          </div>
+        </div>
+
+        <div class="field" data-type="text" data-label="Пожелания по цвету">
+          <label class="field-label" for="f-colors">Свои пожелания по цвету</label>
+          <input class="input" type="text" id="f-colors" placeholder="Фирменный цвет, конкретный HEX, «как в логотипе»">
+        </div>
+      </section>
+
+      <section class="brief-section" id="sec-structure">
+        <div class="brief-head"><span class="brief-num">06</span><h2>Структура</h2></div>
+
+        <div class="field" data-type="checkbox" data-label="Разделы">
+          <label class="field-label">Какие разделы или экраны нужны</label>
+          <p class="field-hint">Для бота — это экраны меню. Можно отметить несколько</p>
+          <div class="chip-grid">
+            <label class="chip"><input type="checkbox" value="Главная"><span>Главная</span></label>
+            <label class="chip"><input type="checkbox" value="О компании"><span>О компании</span></label>
+            <label class="chip"><input type="checkbox" value="Услуги"><span>Услуги</span></label>
+            <label class="chip"><input type="checkbox" value="Каталог товаров"><span>Каталог товаров</span></label>
+            <label class="chip"><input type="checkbox" value="Портфолио / кейсы"><span>Портфолио / кейсы</span></label>
+            <label class="chip"><input type="checkbox" value="Цены и тарифы"><span>Цены и тарифы</span></label>
+            <label class="chip"><input type="checkbox" value="Команда"><span>Команда</span></label>
+            <label class="chip"><input type="checkbox" value="Блог / новости"><span>Блог / новости</span></label>
+            <label class="chip"><input type="checkbox" value="Отзывы"><span>Отзывы</span></label>
+            <label class="chip"><input type="checkbox" value="FAQ"><span>FAQ</span></label>
+            <label class="chip"><input type="checkbox" value="Контакты"><span>Контакты</span></label>
+            <label class="chip"><input type="checkbox" value="Личный кабинет"><span>Личный кабинет</span></label>
+          </div>
+        </div>
+
+        <div class="field" data-type="text" data-label="Другие разделы">
+          <label class="field-label" for="f-pages">Что-то ещё</label>
+          <input class="input" type="text" id="f-pages" placeholder="Разделы, которых нет в списке">
+        </div>
+      </section>
+
+      <section class="brief-section" id="sec-features">
+        <div class="brief-head"><span class="brief-num">07</span><h2>Функции</h2></div>
+
+        <div class="field" data-type="checkbox" data-label="Нужные функции">
+          <label class="field-label">Что должно уметь</label>
+          <p class="field-hint">Можно отметить несколько</p>
+          <div class="chip-grid">
+            <label class="chip"><input type="checkbox" value="Форма заявки"><span>Форма заявки</span></label>
+            <label class="chip"><input type="checkbox" value="Онлайн-оплата"><span>Онлайн-оплата</span></label>
+            <label class="chip"><input type="checkbox" value="Онлайн-запись / бронирование"><span>Онлайн-запись</span></label>
+            <label class="chip"><input type="checkbox" value="Каталог с фильтрами"><span>Каталог с фильтрами</span></label>
+            <label class="chip"><input type="checkbox" value="Корзина и оформление заказа"><span>Корзина и заказ</span></label>
+            <label class="chip"><input type="checkbox" value="Личный кабинет пользователя"><span>Личный кабинет</span></label>
+            <label class="chip"><input type="checkbox" value="Админка для самостоятельного редактирования"><span>Админка</span></label>
+            <label class="chip"><input type="checkbox" value="Уведомления в Telegram о новых заявках"><span>Уведомления в Telegram</span></label>
+            <label class="chip"><input type="checkbox" value="Интеграция с CRM"><span>Интеграция с CRM</span></label>
+            <label class="chip"><input type="checkbox" value="Выгрузка данных в Google Таблицы"><span>Выгрузка в таблицы</span></label>
+            <label class="chip"><input type="checkbox" value="Email или Telegram-рассылка"><span>Рассылка</span></label>
+            <label class="chip"><input type="checkbox" value="Калькулятор стоимости"><span>Калькулятор стоимости</span></label>
+            <label class="chip"><input type="checkbox" value="Поиск"><span>Поиск</span></label>
+            <label class="chip"><input type="checkbox" value="Мультиязычность"><span>Мультиязычность</span></label>
+            <label class="chip"><input type="checkbox" value="SEO-настройка"><span>SEO-настройка</span></label>
+            <label class="chip"><input type="checkbox" value="Аналитика (Метрика / Analytics)"><span>Аналитика</span></label>
+          </div>
+        </div>
+      </section>
+
+      <section class="brief-section" id="sec-content">
+        <div class="brief-head"><span class="brief-num">08</span><h2>Контент</h2></div>
+
+        <div class="field" data-type="radio" data-label="Тексты">
+          <label class="field-label">Тексты</label>
+          <div class="opt-grid">
+            <label class="opt"><input type="radio" name="texts" value="Тексты готовы"><span><b>Готовы</b></span></label>
+            <label class="opt"><input type="radio" name="texts" value="Тексты готовы частично"><span><b>Частично готовы</b></span></label>
+            <label class="opt"><input type="radio" name="texts" value="Нужна помощь с текстами"><span><b>Нужна помощь</b></span></label>
+          </div>
+        </div>
+
+        <div class="field" data-type="radio" data-label="Фото и видео">
+          <label class="field-label">Фото и видео</label>
+          <div class="opt-grid">
+            <label class="opt"><input type="radio" name="media" value="Свои материалы есть"><span><b>Свои есть</b></span></label>
+            <label class="opt"><input type="radio" name="media" value="Нужны стоковые изображения"><span><b>Нужны стоковые</b></span></label>
+            <label class="opt"><input type="radio" name="media" value="Материалов нет вообще"><span><b>Ничего нет</b></span></label>
+          </div>
+        </div>
+      </section>
+
+      <section class="brief-section" id="sec-tech">
+        <div class="brief-head"><span class="brief-num">09</span><h2>Техника</h2></div>
+
+        <div class="field" data-type="radio" data-label="Домен">
+          <label class="field-label">Домен</label>
+          <div class="opt-grid">
+            <label class="opt"><input type="radio" name="domain" value="Домен уже есть"><span><b>Уже есть</b></span></label>
+            <label class="opt"><input type="radio" name="domain" value="Домен нужно подобрать и зарегистрировать"><span><b>Нужно подобрать</b></span></label>
+            <label class="opt"><input type="radio" name="domain" value="Домен не нужен"><span><b>Не нужен</b></span></label>
+          </div>
+        </div>
+
+        <div class="field" data-type="radio" data-label="Хостинг">
+          <label class="field-label">Хостинг / сервер</label>
+          <div class="opt-grid">
+            <label class="opt"><input type="radio" name="hosting" value="Хостинг уже есть"><span><b>Уже есть</b></span></label>
+            <label class="opt"><input type="radio" name="hosting" value="Нужна помощь с выбором хостинга"><span><b>Нужна помощь</b></span></label>
+          </div>
+        </div>
+
+        <div class="field" data-type="radio" data-label="Что есть сейчас">
+          <label class="field-label">Что есть сейчас</label>
+          <div class="opt-grid">
+            <label class="opt"><input type="radio" name="current" value="Делаем с нуля"><span><b>С нуля</b></span></label>
+            <label class="opt"><input type="radio" name="current" value="Есть старая версия, нужен редизайн"><span><b>Нужен редизайн</b></span></label>
+            <label class="opt"><input type="radio" name="current" value="Есть рабочая версия, нужно доработать"><span><b>Нужна доработка</b></span></label>
+          </div>
+        </div>
+
+        <div class="field" data-type="text" data-label="Ссылка на текущий проект">
+          <label class="field-label" for="f-current-url">Ссылка на текущий сайт или бота</label>
+          <input class="input" type="text" id="f-current-url" placeholder="Если есть что показать">
+        </div>
+      </section>
+
+      <section class="brief-section" id="sec-budget">
+        <div class="brief-head"><span class="brief-num">10</span><h2>Бюджет и сроки</h2></div>
+
+        <div class="field" data-type="radio" data-label="Бюджет">
+          <label class="field-label">Ориентировочный бюджет</label>
+          <div class="opt-grid">
+            <label class="opt"><input type="radio" name="budget" value="До 30 000 ₽"><span><b>До 30 000 ₽</b><i>Простой проект</i></span></label>
+            <label class="opt"><input type="radio" name="budget" value="30 000 – 80 000 ₽"><span><b>30–80 тыс ₽</b><i>Средний проект</i></span></label>
+            <label class="opt"><input type="radio" name="budget" value="80 000 – 200 000 ₽"><span><b>80–200 тыс ₽</b><i>Много функций</i></span></label>
+            <label class="opt"><input type="radio" name="budget" value="От 200 000 ₽"><span><b>От 200 тыс ₽</b><i>Большой проект</i></span></label>
+            <label class="opt"><input type="radio" name="budget" value="Бюджет обсудим отдельно"><span><b>Обсудим</b><i>Пока не готов назвать</i></span></label>
+          </div>
+        </div>
+
+        <div class="field" data-type="radio" data-label="Срок">
+          <label class="field-label">Когда нужен результат</label>
+          <div class="opt-grid">
+            <label class="opt"><input type="radio" name="deadline" value="Срочно — в течение недели"><span><b>Срочно</b><i>В течение недели</i></span></label>
+            <label class="opt"><input type="radio" name="deadline" value="В течение месяца"><span><b>В течение месяца</b></span></label>
+            <label class="opt"><input type="radio" name="deadline" value="Не горит, важнее качество"><span><b>Не горит</b><i>Важнее качество</i></span></label>
+          </div>
+        </div>
+
+        <div class="field" data-type="text" data-label="Конкретная дата">
+          <label class="field-label" for="f-date">Конкретная дата, если есть</label>
+          <input class="input" type="text" id="f-date" placeholder="Например: к 1 октября — запускаем рекламу">
+        </div>
+      </section>
+
+      <section class="brief-section" id="sec-extra">
+        <div class="brief-head"><span class="brief-num">11</span><h2>Дополнительно</h2></div>
+
+        <div class="field" data-type="text" data-label="Дополнительно">
+          <label class="field-label" for="f-extra">Что ещё важно знать</label>
+          <textarea class="input" id="f-extra" placeholder="Всё, что не поместилось выше"></textarea>
+        </div>
+
+        <div class="field" data-type="text" data-label="Контакт для связи">
+          <label class="field-label" for="f-contact">Как с вами связаться</label>
+          <input class="input" type="text" id="f-contact" placeholder="Ник в Telegram, телефон или почта">
+        </div>
+      </section>
+
+    </form>
+
+    <section class="brief-section result-section" id="sec-result">
+      <div class="brief-head"><span class="brief-num">→</span><h2>Готовый бриф</h2></div>
+      <p class="field-hint">Нажмите «Собрать бриф» — из заполненных полей соберётся текст. Дальше одна кнопка скопирует его и откроет чат со мной: останется вставить и отправить.</p>
+
+      <div class="result-actions">
+        <button class="btn btn-primary" type="button" id="build-btn">Собрать бриф</button>
+        <button class="btn btn-ghost" type="button" id="clear-btn">Очистить форму</button>
+      </div>
+
+      <textarea class="result-output" id="result" readonly placeholder="Здесь появится готовый текст брифа…"></textarea>
+
+      <div class="result-actions" id="send-actions" hidden>
+        <a class="btn btn-primary" href="https://t.me/nmoskalev10" target="_blank" rel="noopener" id="send-btn">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor" stroke="none"><path d="M21.9 4.3 18.9 19c-.2 1-.8 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.3.3-.5.5-1 .5l.3-4.7 8.5-7.7c.4-.3-.1-.5-.6-.2L7.2 12.9l-4.5-1.4c-1-.3-1-1 .2-1.4l17.6-6.8c.8-.3 1.5.2 1.4 1z"/></svg>
+          Скопировать и открыть Telegram
+        </a>
+        <button class="btn btn-ghost" type="button" id="copy-btn">Просто скопировать</button>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© <span id="year">2026</span> Николай Москалев</span>
+    <a href="index.html">На главную</a>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/brief.js" defer></script>
+</body>
+</html>

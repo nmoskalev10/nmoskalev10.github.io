@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-label="Макет AI-ассистента поддержки">
+  <rect width="640" height="360" fill="#20242b"/>
+  <rect x="0" y="0" width="640" height="34" fill="#171a20"/>
+  <rect x="24" y="12" width="96" height="10" rx="5" fill="#2a2f38"/>
+
+  <circle cx="320" cy="132" r="52" fill="none" stroke="#6f9dd8" stroke-opacity=".35" stroke-width="1.5"/>
+  <circle cx="320" cy="132" r="34" fill="#6f9dd8" opacity=".16"/>
+  <circle cx="320" cy="132" r="13" fill="#6f9dd8" opacity=".9"/>
+  <circle cx="320" cy="80" r="5" fill="#6f9dd8"/>
+  <circle cx="365" cy="158" r="5" fill="#6f9dd8" opacity=".6"/>
+  <circle cx="275" cy="158" r="5" fill="#6f9dd8" opacity=".6"/>
+  <path d="M320 85v34M356 152l-25-14M284 152l25-14" stroke="#6f9dd8" stroke-opacity=".45" stroke-width="1.5"/>
+
+  <rect x="96" y="216" width="448" height="12" rx="6" fill="#333941"/>
+  <rect x="152" y="244" width="336" height="9" rx="4.5" fill="#2c323a"/>
+  <rect x="196" y="268" width="248" height="9" rx="4.5" fill="#2c323a"/>
+
+  <rect x="152" y="304" width="150" height="32" rx="10" fill="#262b33"/>
+  <rect x="170" y="316" width="86" height="7" rx="3.5" fill="#3d434c"/>
+  <rect x="318" y="304" width="150" height="32" rx="10" fill="#262b33"/>
+  <rect x="336" y="316" width="102" height="7" rx="3.5" fill="#3d434c"/>
+</svg>
