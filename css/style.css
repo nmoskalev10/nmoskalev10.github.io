@@ -639,6 +639,60 @@ textarea.input { min-height: 88px; resize: vertical; }
 }
 
 .result-section { border-top: 1px solid var(--border); }
+
+.estimate {
+  margin-bottom: 18px;
+  padding: 20px 22px;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+}
+.estimate-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+.estimate-label {
+  font-size: 0.85rem;
+  font-weight: 550;
+  color: var(--muted);
+}
+.estimate-sum {
+  font-size: clamp(1.25rem, 1rem + 1vw, 1.7rem);
+  font-weight: 660;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.estimate-rows {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  font-size: 0.87rem;
+}
+.estimate-rows:empty { display: none; }
+.estimate-rows li {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 4px 0;
+  color: var(--muted);
+}
+.estimate-rows li span:last-child {
+  flex: none;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.estimate-note {
+  margin-top: 14px;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+.estimate-note b { color: var(--text); font-weight: 580; }
 .result-actions {
   display: flex;
   flex-wrap: wrap;
