@@ -124,25 +124,23 @@ assets/         превью работ и favicon
 
 ## Деплой на GitHub Pages
 
+Сайт уже опубликован: **https://nmoskalev10.github.io**
+
+Репозиторий — `nmoskalev10/nmoskalev10.github.io`, ветка `main`, папка корневая. Публикация обновляется сама: после пуша GitHub пересобирает сайт за 30–60 секунд.
+
+Выкатить изменения:
+
 ```bash
-cd portfolio
-git init
 git add .
-git commit -m "Портфолио"
-git branch -M main
-git remote add origin https://github.com/ВАШ_ЛОГИН/ВАШ_РЕПОЗИТОРИЙ.git
-git push -u origin main
+git commit -m "что поменяли"
+git push
 ```
 
-Дальше в репозитории: **Settings → Pages → Source: Deploy from a branch → Branch: `main`, папка `/ (root)` → Save.**
+Проверить, что сборка прошла: `gh api repos/nmoskalev10/nmoskalev10.github.io/pages --jq .status` — должно быть `built`.
 
-Через минуту сайт будет на `https://ВАШ_ЛОГИН.github.io/ВАШ_РЕПОЗИТОРИЙ/`.
+Свой домен, когда купите, цепляется в **Settings → Pages → Custom domain**; у регистратора нужен CNAME на `nmoskalev10.github.io`. Сертификат GitHub выпустит сам.
 
-Хотите адрес вида `https://ВАШ_ЛОГИН.github.io/` без хвоста — назовите репозиторий `ВАШ_ЛОГИН.github.io`.
-
-Свой домен подключается там же, в **Settings → Pages → Custom domain**; у регистратора домена нужно прописать CNAME на `ВАШ_ЛОГИН.github.io`.
-
-Файл `.nojekyll` в корне нужен, чтобы GitHub не пытался прогонять сайт через Jekyll — не удаляйте его.
+Файл `.nojekyll` в корне нужен, чтобы GitHub не прогонял сайт через Jekyll — не удаляйте его.
 
 ## Локальная проверка
 
