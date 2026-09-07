@@ -251,6 +251,7 @@ a:hover { color: var(--accent-hover); }
 .grid-2 { grid-template-columns: repeat(2, 1fr); }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
 .grid-4 { grid-template-columns: repeat(4, 1fr); }
+.grid-solo { grid-template-columns: minmax(0, 560px); justify-content: center; }
 
 /* tiles */
 
