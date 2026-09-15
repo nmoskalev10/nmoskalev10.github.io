@@ -304,6 +304,21 @@ a:hover { color: var(--accent-hover); }
 }
 .card-body p { margin-top: 9px; font-size: 0.92rem; color: var(--muted); }
 
+.card-badge {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 7px;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;
