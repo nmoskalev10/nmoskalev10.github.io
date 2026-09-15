@@ -38,6 +38,11 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 84px;
   -webkit-text-size-adjust: 100%;
+  /* Мобильные браузеры на движке WebKit/Blink рисуют свой полупрозрачный
+     прямоугольник поверх любой нажатой ссылки или кнопки. Он не совпадает
+     ни с цветами сайта, ни со скруглением элемента, поэтому гасим его —
+     отклик на нажатие даёт :active ниже. */
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -66,6 +71,13 @@ a:hover { color: var(--accent-hover); }
   outline-offset: 3px;
   border-radius: 4px;
 }
+
+/* Нажатие: собственный отклик вместо системного квадрата. У .btn он уже
+   есть ниже (translateY), поэтому здесь только те элементы, у которых
+   своего нет. */
+.theme-toggle:active,
+.fab:active { transform: scale(.94); }
+.card-link:active { opacity: .85; }
 
 .container {
   width: 100%;
